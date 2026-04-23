@@ -1,0 +1,59 @@
+{
+  "version": "2025.0",
+  "waypoints": [
+    {
+      "anchor": {
+        "x": 2.706376604850214,
+        "y": 6.784465049928674
+      },
+      "prevControl": null,
+      "nextControl": {
+        "x": 2.7710699001426535,
+        "y": 7.599600570613409
+      },
+      "isLocked": false,
+      "linkedName": "Auto 5 path 2 start"
+    },
+    {
+      "anchor": {
+        "x": 4.621298145506419,
+        "y": 7.41845934379458
+      },
+      "prevControl": {
+        "x": 4.313015497921446,
+        "y": 7.434684746299053
+      },
+      "nextControl": null,
+      "isLocked": false,
+      "linkedName": "Auto 5 path 2 end"
+    }
+  ],
+  "rotationTargets": [
+    {
+      "waypointRelativePos": 0.4731404958677684,
+      "rotationDegrees": -167.3647750898435
+    }
+  ],
+  "constraintZones": [],
+  "pointTowardsZones": [],
+  "eventMarkers": [],
+  "globalConstraints": {
+    "maxVelocity": 2.2,
+    "maxAcceleration": 3.0,
+    "maxAngularVelocity": 540.0,
+    "maxAngularAcceleration": 720.0,
+    "nominalVoltage": 12.0,
+    "unlimited": false
+  },
+  "goalEndState": {
+    "velocity": 0,
+    "rotation": 179.9249848960361
+  },
+  "reversed": false,
+  "folder": "AUTO 5 PATHS",
+  "idealStartingState": {
+    "velocity": 0,
+    "rotation": -72.0720802379928
+  },
+  "useDefaultConstraints": false
+}

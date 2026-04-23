@@ -1,0 +1,633 @@
+{
+  "version": 1.0,
+  "grid_size": 128,
+  "tabs": [
+    {
+      "name": "Autonomous",
+      "grid_layout": {
+        "layouts": [],
+        "containers": [
+          {
+            "title": "FMSInfo",
+            "x": 1536.0,
+            "y": 0.0,
+            "width": 384.0,
+            "height": 128.0,
+            "type": "FMSInfo",
+            "properties": {
+              "topic": "/FMSInfo",
+              "period": 0.06
+            }
+          },
+          {
+            "title": "Auto Mode",
+            "x": 1536.0,
+            "y": 128.0,
+            "width": 384.0,
+            "height": 128.0,
+            "type": "ComboBox Chooser",
+            "properties": {
+              "topic": "/SmartDashboard/Auto Mode",
+              "period": 0.06,
+              "sort_options": false
+            }
+          },
+          {
+            "title": "Scheduler",
+            "x": 1280.0,
+            "y": 0.0,
+            "width": 256.0,
+            "height": 640.0,
+            "type": "Scheduler",
+            "properties": {
+              "topic": "/SmartDashboard/Scheduler",
+              "period": 0.06
+            }
+          },
+          {
+            "title": "Swerve Drive",
+            "x": 1536.0,
+            "y": 256.0,
+            "width": 384.0,
+            "height": 384.0,
+            "type": "SwerveDrive",
+            "properties": {
+              "topic": "/SmartDashboard/Swerve Drive",
+              "period": 0.06,
+              "show_robot_rotation": true,
+              "rotation_unit": "Radians"
+            }
+          },
+          {
+            "title": "Field",
+            "x": 0.0,
+            "y": 0.0,
+            "width": 1280.0,
+            "height": 640.0,
+            "type": "Field",
+            "properties": {
+              "topic": "/SmartDashboard/Field",
+              "period": 0.06,
+              "field_game": "Rebuilt",
+              "robot_width": 0.85,
+              "robot_length": 0.85,
+              "show_other_objects": false,
+              "show_trajectories": true,
+              "field_rotation": 0.0,
+              "robot_color": 4294198070,
+              "trajectory_color": 4294967295,
+              "show_robot_outside_widget": true
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "Teleoperated",
+      "grid_layout": {
+        "layouts": [
+          {
+            "title": "CameraPublisher",
+            "x": 1152.0,
+            "y": 0.0,
+            "width": 384.0,
+            "height": 384.0,
+            "type": "List Layout",
+            "properties": {
+              "label_position": "TOP"
+            },
+            "children": [
+              {
+                "title": "limelight-three",
+                "x": 0.0,
+                "y": 0.0,
+                "width": 256.0,
+                "height": 256.0,
+                "type": "Camera Stream",
+                "properties": {
+                  "topic": "/CameraPublisher/limelight-three",
+                  "period": 0.06,
+                  "rotation_turns": 0
+                }
+              }
+            ]
+          }
+        ],
+        "containers": [
+          {
+            "title": "Field",
+            "x": 0.0,
+            "y": 0.0,
+            "width": 1152.0,
+            "height": 512.0,
+            "type": "Field",
+            "properties": {
+              "topic": "/SmartDashboard/Field",
+              "period": 0.06,
+              "field_game": "Rebuilt",
+              "robot_width": 0.89,
+              "robot_length": 0.99,
+              "show_other_objects": false,
+              "show_trajectories": true,
+              "field_rotation": 0.0,
+              "robot_color": 4284478518,
+              "trajectory_color": 4292602950,
+              "show_robot_outside_widget": true
+            }
+          },
+          {
+            "title": "robotPose",
+            "x": 0.0,
+            "y": 512.0,
+            "width": 640.0,
+            "height": 128.0,
+            "type": "Text Display",
+            "properties": {
+              "topic": "/Pose/robotPose",
+              "period": 0.06,
+              "data_type": "double[]",
+              "show_submit_button": false
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "Full Field",
+      "grid_layout": {
+        "layouts": [],
+        "containers": [
+          {
+            "title": "Field",
+            "x": 512.0,
+            "y": 0.0,
+            "width": 640.0,
+            "height": 896.0,
+            "type": "Field",
+            "properties": {
+              "topic": "/SmartDashboard/Field",
+              "period": 0.06,
+              "field_game": "Reefscape",
+              "robot_width": 0.89,
+              "robot_length": 0.99,
+              "show_other_objects": true,
+              "show_trajectories": true,
+              "field_rotation": 90.0,
+              "robot_color": 4284478518,
+              "trajectory_color": 4292602950,
+              "show_robot_outside_widget": true
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "Subsystems",
+      "grid_layout": {
+        "layouts": [],
+        "containers": [
+          {
+            "title": "Swerve Drive",
+            "x": 0.0,
+            "y": 0.0,
+            "width": 512.0,
+            "height": 512.0,
+            "type": "SwerveDrive",
+            "properties": {
+              "topic": "/SmartDashboard/Swerve Drive",
+              "period": 0.06,
+              "show_robot_rotation": true,
+              "rotation_unit": "Radians"
+            }
+          },
+          {
+            "title": "Intake RPMs",
+            "x": 512.0,
+            "y": 0.0,
+            "width": 256.0,
+            "height": 256.0,
+            "type": "Radial Gauge",
+            "properties": {
+              "topic": "/SmartDashboard/Intake RPMs",
+              "period": 0.06,
+              "data_type": "double",
+              "start_angle": -140.0,
+              "end_angle": 140.0,
+              "min_value": 0.0,
+              "max_value": 100.0,
+              "number_of_labels": 8,
+              "wrap_value": false,
+              "show_pointer": true,
+              "show_ticks": true
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "Turret",
+      "grid_layout": {
+        "layouts": [],
+        "containers": [
+          {
+            "title": "Target_Angle",
+            "x": 0.0,
+            "y": 0.0,
+            "width": 384.0,
+            "height": 384.0,
+            "type": "Radial Gauge",
+            "properties": {
+              "topic": "/SmartDashboard/Turret/Aim/Target_Angle",
+              "period": 0.06,
+              "data_type": "double",
+              "start_angle": -140.0,
+              "end_angle": 140.0,
+              "min_value": 0.0,
+              "max_value": 100.0,
+              "number_of_labels": 8,
+              "wrap_value": false,
+              "show_pointer": true,
+              "show_ticks": true
+            }
+          },
+          {
+            "title": "AngleDeg",
+            "x": 384.0,
+            "y": 0.0,
+            "width": 384.0,
+            "height": 384.0,
+            "type": "Radial Gauge",
+            "properties": {
+              "topic": "/SmartDashboard/Turret/AngleDeg",
+              "period": 0.06,
+              "data_type": "double",
+              "start_angle": -140.0,
+              "end_angle": 140.0,
+              "min_value": 0.0,
+              "max_value": 100.0,
+              "number_of_labels": 8,
+              "wrap_value": false,
+              "show_pointer": true,
+              "show_ticks": true
+            }
+          },
+          {
+            "title": "robotPose",
+            "x": 0.0,
+            "y": 384.0,
+            "width": 768.0,
+            "height": 128.0,
+            "type": "Text Display",
+            "properties": {
+              "topic": "/Pose/robotPose",
+              "period": 0.06,
+              "data_type": "double[]",
+              "show_submit_button": false
+            }
+          },
+          {
+            "title": "FlywheelLeftRPM",
+            "x": 1408.0,
+            "y": 0.0,
+            "width": 256.0,
+            "height": 256.0,
+            "type": "Radial Gauge",
+            "properties": {
+              "topic": "/SmartDashboard/Shooter/FlywheelLeftRPM",
+              "period": 0.06,
+              "data_type": "double",
+              "start_angle": -180.0,
+              "end_angle": 180.0,
+              "min_value": 0.0,
+              "max_value": 7000.0,
+              "number_of_labels": 8,
+              "wrap_value": false,
+              "show_pointer": true,
+              "show_ticks": true
+            }
+          },
+          {
+            "title": "FlywheelRightRPM",
+            "x": 1664.0,
+            "y": 0.0,
+            "width": 256.0,
+            "height": 256.0,
+            "type": "Radial Gauge",
+            "properties": {
+              "topic": "/SmartDashboard/Shooter/FlywheelRightRPM",
+              "period": 0.06,
+              "data_type": "double",
+              "start_angle": -180.0,
+              "end_angle": 180.0,
+              "min_value": 0.0,
+              "max_value": 7000.0,
+              "number_of_labels": 8,
+              "wrap_value": false,
+              "show_pointer": true,
+              "show_ticks": true
+            }
+          },
+          {
+            "title": "Field",
+            "x": 768.0,
+            "y": 0.0,
+            "width": 640.0,
+            "height": 512.0,
+            "type": "Field",
+            "properties": {
+              "topic": "/SmartDashboard/Field",
+              "period": 0.06,
+              "field_game": "Rebuilt",
+              "robot_width": 0.85,
+              "robot_length": 0.85,
+              "show_other_objects": false,
+              "show_trajectories": true,
+              "field_rotation": 0.0,
+              "robot_color": 4294198070,
+              "trajectory_color": 4294967295,
+              "show_robot_outside_widget": true
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "Shooter",
+      "grid_layout": {
+        "layouts": [
+          {
+            "title": "CameraPublisher",
+            "x": 768.0,
+            "y": 384.0,
+            "width": 256.0,
+            "height": 256.0,
+            "type": "List Layout",
+            "properties": {
+              "label_position": "TOP"
+            },
+            "children": [
+              {
+                "title": "limelight-three",
+                "x": 0.0,
+                "y": 0.0,
+                "width": 256.0,
+                "height": 256.0,
+                "type": "Camera Stream",
+                "properties": {
+                  "topic": "/CameraPublisher/limelight-three",
+                  "period": 0.06,
+                  "rotation_turns": 0
+                }
+              }
+            ]
+          }
+        ],
+        "containers": [
+          {
+            "title": "FlywheelRightRPM",
+            "x": 0.0,
+            "y": 0.0,
+            "width": 640.0,
+            "height": 384.0,
+            "type": "Graph",
+            "properties": {
+              "topic": "/SmartDashboard/Shooter/FlywheelRightRPM",
+              "period": 0.033,
+              "data_type": "double",
+              "time_displayed": 20.0,
+              "min_value": 0.0,
+              "max_value": 7000.0,
+              "color": 4278238420,
+              "line_width": 2.0
+            }
+          },
+          {
+            "title": "Locked",
+            "x": 256.0,
+            "y": 512.0,
+            "width": 128.0,
+            "height": 128.0,
+            "type": "Boolean Box",
+            "properties": {
+              "topic": "/SmartDashboard/Turret/Locked",
+              "period": 0.06,
+              "data_type": "boolean",
+              "true_color": 4283215696,
+              "false_color": 4294198070,
+              "true_icon": "None",
+              "false_icon": "None"
+            }
+          },
+          {
+            "title": "Field",
+            "x": 1024.0,
+            "y": 384.0,
+            "width": 896.0,
+            "height": 384.0,
+            "type": "Field",
+            "properties": {
+              "topic": "/SmartDashboard/Field",
+              "period": 0.06,
+              "field_game": "Rebuilt",
+              "robot_width": 0.9,
+              "robot_length": 0.805,
+              "show_other_objects": false,
+              "show_trajectories": true,
+              "field_rotation": 0.0,
+              "robot_color": 4294198070,
+              "trajectory_color": 4294967295,
+              "show_robot_outside_widget": true
+            }
+          },
+          {
+            "title": "Shooting",
+            "x": 384.0,
+            "y": 384.0,
+            "width": 256.0,
+            "height": 256.0,
+            "type": "Boolean Box",
+            "properties": {
+              "topic": "/SmartDashboard/Shooting",
+              "period": 0.06,
+              "data_type": "boolean",
+              "true_color": 4283215696,
+              "false_color": 4294198070,
+              "true_icon": "None",
+              "false_icon": "None"
+            }
+          },
+          {
+            "title": "Idle",
+            "x": 0.0,
+            "y": 384.0,
+            "width": 256.0,
+            "height": 256.0,
+            "type": "Boolean Box",
+            "properties": {
+              "topic": "/SmartDashboard/Idle",
+              "period": 0.06,
+              "data_type": "boolean",
+              "true_color": 4283215696,
+              "false_color": 4294198070,
+              "true_icon": "None",
+              "false_icon": "None"
+            }
+          },
+          {
+            "title": "Dist_Effective",
+            "x": 256.0,
+            "y": 384.0,
+            "width": 128.0,
+            "height": 128.0,
+            "type": "Text Display",
+            "properties": {
+              "topic": "/SmartDashboard/Turret/Aim/Dist_Effective",
+              "period": 0.06,
+              "data_type": "double",
+              "show_submit_button": false
+            }
+          },
+          {
+            "title": "ShooterTargetRPM",
+            "x": 640.0,
+            "y": 0.0,
+            "width": 640.0,
+            "height": 384.0,
+            "type": "Graph",
+            "properties": {
+              "topic": "/SmartDashboard/Shooter/ShooterTargetRPM",
+              "period": 0.033,
+              "data_type": "double",
+              "time_displayed": 20.0,
+              "min_value": 0.0,
+              "max_value": 7000.0,
+              "color": 4278238420,
+              "line_width": 2.0
+            }
+          },
+          {
+            "title": "Spindexer vel",
+            "x": 1280.0,
+            "y": 0.0,
+            "width": 640.0,
+            "height": 384.0,
+            "type": "Graph",
+            "properties": {
+              "topic": "/SmartDashboard/Spindexer vel",
+              "period": 0.033,
+              "data_type": "double",
+              "time_displayed": 20.0,
+              "min_value": 0.0,
+              "max_value": 7000.0,
+              "color": 4278238420,
+              "line_width": 2.0
+            }
+          },
+          {
+            "title": "hasSpunUp",
+            "x": 640.0,
+            "y": 512.0,
+            "width": 128.0,
+            "height": 128.0,
+            "type": "Boolean Box",
+            "properties": {
+              "topic": "/SmartDashboard/hasSpunUp",
+              "period": 0.06,
+              "data_type": "boolean",
+              "true_color": 4283215696,
+              "false_color": 4294198070,
+              "true_icon": "None",
+              "false_icon": "None"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "Intake",
+      "grid_layout": {
+        "layouts": [],
+        "containers": [
+          {
+            "title": "LeftPivotPos",
+            "x": 768.0,
+            "y": 0.0,
+            "width": 384.0,
+            "height": 384.0,
+            "type": "Radial Gauge",
+            "properties": {
+              "topic": "/SmartDashboard/LeftPivotPos",
+              "period": 0.06,
+              "data_type": "double",
+              "start_angle": -140.0,
+              "end_angle": 140.0,
+              "min_value": -180.0,
+              "max_value": 180.0,
+              "number_of_labels": 8,
+              "wrap_value": false,
+              "show_pointer": true,
+              "show_ticks": true
+            }
+          },
+          {
+            "title": "RightPivotPos",
+            "x": 1152.0,
+            "y": 0.0,
+            "width": 384.0,
+            "height": 384.0,
+            "type": "Radial Gauge",
+            "properties": {
+              "topic": "/SmartDashboard/RightPivotPos",
+              "period": 0.06,
+              "data_type": "double",
+              "start_angle": -140.0,
+              "end_angle": 140.0,
+              "min_value": -180.0,
+              "max_value": 180.0,
+              "number_of_labels": 8,
+              "wrap_value": false,
+              "show_pointer": true,
+              "show_ticks": true
+            }
+          },
+          {
+            "title": "FeederLeftVel",
+            "x": 0.0,
+            "y": 0.0,
+            "width": 384.0,
+            "height": 256.0,
+            "type": "Graph",
+            "properties": {
+              "topic": "/SmartDashboard/FeederLeftVel",
+              "period": 0.033,
+              "data_type": "double",
+              "time_displayed": 20.0,
+              "min_value": 0.0,
+              "max_value": 100.0,
+              "color": 4278238420,
+              "line_width": 2.0
+            }
+          },
+          {
+            "title": "FeederRightVel",
+            "x": 384.0,
+            "y": 0.0,
+            "width": 384.0,
+            "height": 256.0,
+            "type": "Graph",
+            "properties": {
+              "topic": "/SmartDashboard/FeederRightVel",
+              "period": 0.033,
+              "data_type": "double",
+              "time_displayed": 20.0,
+              "min_value": 0.0,
+              "max_value": 100.0,
+              "color": 4278238420,
+              "line_width": 2.0
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

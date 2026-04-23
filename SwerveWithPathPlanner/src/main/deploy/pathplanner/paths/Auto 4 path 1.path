@@ -1,0 +1,182 @@
+{
+  "version": "2025.0",
+  "waypoints": [
+    {
+      "anchor": {
+        "x": 4.408354203935599,
+        "y": 0.6195527728085859
+      },
+      "prevControl": null,
+      "nextControl": {
+        "x": 5.408354203935601,
+        "y": 0.6195527728085859
+      },
+      "isLocked": false,
+      "linkedName": null
+    },
+    {
+      "anchor": {
+        "x": 5.884865831842576,
+        "y": 0.6195527728085859
+      },
+      "prevControl": {
+        "x": 4.885240065022783,
+        "y": 0.5921972192602407
+      },
+      "nextControl": {
+        "x": 7.053766048502139,
+        "y": 0.6515406562054205
+      },
+      "isLocked": false,
+      "linkedName": null
+    },
+    {
+      "anchor": {
+        "x": 7.519557774607703,
+        "y": 1.3334704830053659
+      },
+      "prevControl": {
+        "x": 7.15395868248806,
+        "y": 1.0036938747662045
+      },
+      "nextControl": {
+        "x": 7.777752303762322,
+        "y": 1.5663663460581472
+      },
+      "isLocked": false,
+      "linkedName": null
+    },
+    {
+      "anchor": {
+        "x": 7.519557774607703,
+        "y": 2.941683309557775
+      },
+      "prevControl": {
+        "x": 7.786180338814768,
+        "y": 2.964489689480726
+      },
+      "nextControl": {
+        "x": 7.117996422182468,
+        "y": 2.907334525939177
+      },
+      "isLocked": false,
+      "linkedName": null
+    },
+    {
+      "anchor": {
+        "x": 5.738837209302326,
+        "y": 2.6315026833631485
+      },
+      "prevControl": {
+        "x": 6.647459749552772,
+        "y": 2.858658318425761
+      },
+      "nextControl": {
+        "x": 5.496301584265991,
+        "y": 2.5708687771040646
+      },
+      "isLocked": false,
+      "linkedName": null
+    },
+    {
+      "anchor": {
+        "x": 2.980518783542039,
+        "y": 2.29076923076923
+      },
+      "prevControl": {
+        "x": 3.2910466009457475,
+        "y": 2.47191045758806
+      },
+      "nextControl": {
+        "x": 2.76457405831743,
+        "y": 2.164801474388208
+      },
+      "isLocked": false,
+      "linkedName": null
+    },
+    {
+      "anchor": {
+        "x": 2.6416833095577745,
+        "y": 1.479614835948646
+      },
+      "prevControl": {
+        "x": 2.6643172460684044,
+        "y": 1.728588137565572
+      },
+      "nextControl": null,
+      "isLocked": false,
+      "linkedName": "Auto 4 path 2 start"
+    }
+  ],
+  "rotationTargets": [
+    {
+      "waypointRelativePos": 0.8216432865731464,
+      "rotationDegrees": 180.0
+    },
+    {
+      "waypointRelativePos": 1.2148760330578519,
+      "rotationDegrees": 180.0
+    },
+    {
+      "waypointRelativePos": 1.6132264529058118,
+      "rotationDegrees": -113.72129254648581
+    },
+    {
+      "waypointRelativePos": 2.955911823647297,
+      "rotationDegrees": -32.120851704692384
+    },
+    {
+      "waypointRelativePos": 4.008016032064128,
+      "rotationDegrees": -25.15610419361698
+    },
+    {
+      "waypointRelativePos": 4.6055437100213314,
+      "rotationDegrees": 33.737651267068095
+    }
+  ],
+  "constraintZones": [],
+  "pointTowardsZones": [],
+  "eventMarkers": [
+    {
+      "name": "Feed",
+      "waypointRelativePos": 1.3571428571428572,
+      "endWaypointRelativePos": null,
+      "command": {
+        "type": "named",
+        "data": {
+          "name": "Feed"
+        }
+      }
+    },
+    {
+      "name": "Feedn't",
+      "waypointRelativePos": 3.9285714285714195,
+      "endWaypointRelativePos": null,
+      "command": {
+        "type": "named",
+        "data": {
+          "name": "Feedn't"
+        }
+      }
+    }
+  ],
+  "globalConstraints": {
+    "maxVelocity": 2.4,
+    "maxAcceleration": 3.0,
+    "maxAngularVelocity": 540.0,
+    "maxAngularAcceleration": 720.0,
+    "nominalVoltage": 12.0,
+    "unlimited": false
+  },
+  "goalEndState": {
+    "velocity": 0,
+    "rotation": 74.57783868126141
+  },
+  "reversed": false,
+  "folder": "AUTO 4 PATHS",
+  "idealStartingState": {
+    "velocity": 0,
+    "rotation": 180.0
+  },
+  "useDefaultConstraints": false
+}

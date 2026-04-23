@@ -1,0 +1,59 @@
+{
+  "version": "2025.0",
+  "waypoints": [
+    {
+      "anchor": {
+        "x": 2.6416833095577745,
+        "y": 1.479614835948646
+      },
+      "prevControl": null,
+      "nextControl": {
+        "x": 2.5099821109123432,
+        "y": 0.6357781753130587
+      },
+      "isLocked": false,
+      "linkedName": "Auto 4 path 2 start"
+    },
+    {
+      "anchor": {
+        "x": 4.619284436493739,
+        "y": 0.6195527728085859
+      },
+      "prevControl": {
+        "x": 4.311001788908767,
+        "y": 0.6357781753130587
+      },
+      "nextControl": null,
+      "isLocked": false,
+      "linkedName": "Auto 4 path 2 end"
+    }
+  ],
+  "rotationTargets": [
+    {
+      "waypointRelativePos": 0.4731404958677684,
+      "rotationDegrees": 156.75620168335627
+    }
+  ],
+  "constraintZones": [],
+  "pointTowardsZones": [],
+  "eventMarkers": [],
+  "globalConstraints": {
+    "maxVelocity": 2.2,
+    "maxAcceleration": 3.0,
+    "maxAngularVelocity": 540.0,
+    "maxAngularAcceleration": 720.0,
+    "nominalVoltage": 12.0,
+    "unlimited": false
+  },
+  "goalEndState": {
+    "velocity": 0,
+    "rotation": 179.9249848960361
+  },
+  "reversed": false,
+  "folder": "AUTO 4 PATHS",
+  "idealStartingState": {
+    "velocity": 0,
+    "rotation": 74.57783868126141
+  },
+  "useDefaultConstraints": false
+}
