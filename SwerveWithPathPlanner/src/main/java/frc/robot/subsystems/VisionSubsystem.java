@@ -3,10 +3,12 @@ package frc.robot.subsystems;
 import org.photonvision.PhotonCamera;
 import org.photonvision.PhotonPoseEstimator;
 import org.photonvision.proto.Photon;
+
+import edu.wpi.first.math.geometry.Pose3d;
 import edu.wpi.first.math.geometry.Rotation3d;
 import edu.wpi.first.math.geometry.Translation3d;
 import edu.wpi.first.math.geometry.Transform3d;
-
+import edu.wpi.first.wpilibj.DriverStation;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
 import java.io.IOException;
@@ -26,6 +28,11 @@ import edu.wpi.first.math.util.Units;
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
 import frc.robot.LimelightHelpers;
 import frc.robot.LimelightHelpers.PoseEstimate;
+import gg.questnav.questnav.PoseFrame;
+
+//QUESTNAV
+/*import gg.questnav.questnav.QuestNav;
+import gg.questnav.questnav.PoseFrame; */
 
 
 public class VisionSubsystem extends SubsystemBase {
@@ -46,6 +53,18 @@ public class VisionSubsystem extends SubsystemBase {
         new Translation3d(-0.34, 0.35025, 0.52), 
         new Rotation3d(0, Math.toRadians(0), Math.PI) 
     );
+
+    //QUESTNAV
+    //private final QuestNav questNav = new QuestNav(); 
+
+    //private static final Transform3d ROBOT_TO_QUEST = new Transform3d(0.0, 0.0, 0.0, new Rotation3d());
+
+    //private static final Matrix<N3, N1> QUESTNAV_STD_DEVS = VecBuilder.fill(0.02, 0.02, 0.035);
+
+
+
+
+
 
     /*private static final Transform3d kRobotToCam2 = new Transform3d(
         new Translation3d(0.29972, -0.32004, 0.5207), 
@@ -88,6 +107,12 @@ public class VisionSubsystem extends SubsystemBase {
             );*/
         }
 
+        //QUESTNAV
+        /*questNav.onConnected(() -> System.out.println("Quest connected!"));
+        questNav.onDisconnected(() -> DriverStation.reportWarning("Quest disconnected!", false));
+        questNav.onTrackingAcquired(() -> System.out.println("Quest tracking acquired!"));
+        questNav.onTrackingLost(() -> DriverStation.reportWarning("Quest tracking lost! Falling back to Limelight/Odometry.", false));
+        questNav.onLowBattery(20, level -> DriverStation.reportWarning("Quest battery low: " + level + "%", false));*/
         
     }
 
@@ -98,7 +123,36 @@ public class VisionSubsystem extends SubsystemBase {
        updatePhotonVision(photonPoseEstimator1, photon1);
        //updatePhotonVision(photonPoseEstimator2, photon2);
 
+
+       //QUESTNAV
+       /* 
+       questNav.commandPeriodic();
+       updateQuestNav();*/
+
     }
+
+    /*private void updateQuestNav() {
+        // Fetch unread frames from the headset
+        PoseFrame[] questFrames = questNav.getAllUnreadPoseFrames();
+
+        for (PoseFrame frame : questFrames) {
+            // Ensure the headset is actually tracking safely
+            if (frame.isTracking()) {
+                Pose3d questPose = frame.questPose3d();
+                double timestamp = frame.dataTimestamp();
+
+                // Calculate the robot's center position by reversing the offset
+                Pose3d robotPose = questPose.transformBy(ROBOT_TO_QUEST.inverse());
+
+                // Add to your Swerve Drive Pose Estimator
+                drivetrain.addVisionMeasurement(
+                    robotPose.toPose2d(), 
+                    timestamp, 
+                    QUESTNAV_STD_DEVS
+                );
+            }
+        }
+    }*/
 
     private void updateLimelight(){
         /* * 1. Send Orientation to Limelight 
@@ -215,4 +269,9 @@ public class VisionSubsystem extends SubsystemBase {
 
         return VecBuilder.fill(xyStds, xyStds, Units.degreesToRadians(degStds));
     }
+
+    /*public void resetQuestPose(Pose3d knownRobotPose) {
+        Pose3d questPose = knownRobotPose.transformBy(ROBOT_TO_QUEST);
+        questNav.setPose(questPose);
+    } */
 }

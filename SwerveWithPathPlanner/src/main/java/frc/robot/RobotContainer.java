@@ -71,6 +71,8 @@ public class RobotContainer {
     ()->drivetrain.getState().Speeds, operator, s_Kicker, s_Spindexer, s_LEDs);
     
     public final VisionSubsystem s_Vision;
+
+    //public final Questnav s_Questnav;
     
     
 
@@ -85,6 +87,8 @@ public class RobotContainer {
         //Subsystems
         s_Intake = new Intake(s_LEDs);
         s_Vision = new VisionSubsystem(drivetrain);
+
+        //s_Questnav = new Questnav(drivetrain);
         //s_Climber = new Climber();
 
         //s_Climber.setDefaultCommand(new ClimberDefault(s_Climber));
